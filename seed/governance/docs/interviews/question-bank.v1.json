@@ -1,0 +1,445 @@
+{
+  "version": "1.0",
+  "name": "SpecKit Interview Question Bank",
+  "language": "en",
+  "sections": [
+    "Context & Why",
+    "Users & Scenarios",
+    "Scope Boundaries",
+    "Inputs, Data, Integrations",
+    "Rules, Edge Cases, Failures",
+    "UX & Product Decisions",
+    "Constraints & Compliance",
+    "Validation & Approval",
+    "Rollout & Operations"
+  ],
+  "questions": [
+    {
+      "id": "CW-01",
+      "section": "Context & Why",
+      "intent": "Define the core problem and target user.",
+      "question": "What problem are we solving, and for whom?",
+      "followups": [
+        "Who feels the pain the most?",
+        "What happens if we do nothing for 6 months?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "problem",
+        "user"
+      ],
+      "outputs": [
+        "spec"
+      ]
+    },
+    {
+      "id": "CW-02",
+      "section": "Context & Why",
+      "intent": "Capture current state and pain points.",
+      "question": "What happens today (current workflow), and what hurts most?",
+      "followups": [
+        "Where does time/money get wasted?",
+        "What errors happen repeatedly?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "current_state",
+        "pain"
+      ],
+      "outputs": [
+        "spec"
+      ]
+    },
+    {
+      "id": "CW-03",
+      "section": "Context & Why",
+      "intent": "Define success criteria and measurable outcomes.",
+      "question": "What does success look like, and how will we measure it?",
+      "followups": [
+        "What metric moves?",
+        "What is a pass/fail outcome for v1?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "success",
+        "metrics"
+      ],
+      "outputs": [
+        "spec",
+        "plan"
+      ]
+    },
+    {
+      "id": "US-01",
+      "section": "Users & Scenarios",
+      "intent": "Identify user types and roles.",
+      "question": "What are the user types/personas involved (and what permissions differ)?",
+      "followups": [
+        "Any admin vs regular roles?",
+        "Any external vs internal users?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "users",
+        "roles",
+        "auth"
+      ],
+      "outputs": [
+        "spec",
+        "plan"
+      ]
+    },
+    {
+      "id": "US-02",
+      "section": "Users & Scenarios",
+      "intent": "Extract end-to-end workflows for requirements.",
+      "question": "Walk me through the top 3 user journeys end-to-end.",
+      "followups": [
+        "Where does the journey start?",
+        "Where can it fail?",
+        "What\u2019s the happy path?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "journey",
+        "workflow"
+      ],
+      "outputs": [
+        "spec",
+        "tasks"
+      ]
+    },
+    {
+      "id": "US-03",
+      "section": "Users & Scenarios",
+      "intent": "Anchor v1 to a single critical outcome.",
+      "question": "What is the one thing users must be able to do on day 1?",
+      "followups": [
+        "If we ship only that, is it still valuable?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "v1",
+        "value"
+      ],
+      "outputs": [
+        "spec"
+      ]
+    },
+    {
+      "id": "SC-01",
+      "section": "Scope Boundaries",
+      "intent": "Define v1 scope clearly.",
+      "question": "What is explicitly in scope for v1?",
+      "followups": [
+        "List deliverables/features.",
+        "What must be included for launch?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "scope",
+        "v1"
+      ],
+      "outputs": [
+        "spec",
+        "tasks"
+      ]
+    },
+    {
+      "id": "SC-02",
+      "section": "Scope Boundaries",
+      "intent": "Prevent scope creep by naming exclusions.",
+      "question": "What is explicitly out of scope for v1 (even if tempting)?",
+      "followups": [
+        "What can wait for v2?",
+        "What do we refuse to build now?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "scope",
+        "non_goals"
+      ],
+      "outputs": [
+        "spec"
+      ]
+    },
+    {
+      "id": "SC-03",
+      "section": "Scope Boundaries",
+      "intent": "Prioritize requirements for planning and tradeoffs.",
+      "question": "What are the must-haves vs nice-to-haves?",
+      "followups": [
+        "If the deadline hits, what gets cut first?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "priority"
+      ],
+      "outputs": [
+        "spec",
+        "plan",
+        "tasks"
+      ]
+    },
+    {
+      "id": "DI-01",
+      "section": "Inputs, Data, Integrations",
+      "intent": "Identify inputs and formats for data contracts.",
+      "question": "What data comes in, from where, and in what format?",
+      "followups": [
+        "Any files? APIs? manual entry?",
+        "Any schemas or examples?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "data",
+        "contracts"
+      ],
+      "outputs": [
+        "spec",
+        "plan"
+      ]
+    },
+    {
+      "id": "DI-02",
+      "section": "Inputs, Data, Integrations",
+      "intent": "Identify external dependencies early.",
+      "question": "What systems must we integrate with (auth, payments, CRM, etc.)?",
+      "followups": [
+        "Who owns each integration?",
+        "Do we have credentials/sandboxes?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "integration",
+        "dependency"
+      ],
+      "outputs": [
+        "spec",
+        "plan",
+        "tasks"
+      ]
+    },
+    {
+      "id": "DI-03",
+      "section": "Inputs, Data, Integrations",
+      "intent": "Define persistence needs and data lifecycle.",
+      "question": "What data must be stored, what can be transient, and for how long?",
+      "followups": [
+        "Retention rules?",
+        "Deletion requests?",
+        "Audit requirements?"
+      ],
+      "answer_type": "free_text",
+      "priority": "should",
+      "tags": [
+        "storage",
+        "retention",
+        "audit"
+      ],
+      "outputs": [
+        "spec",
+        "plan"
+      ]
+    },
+    {
+      "id": "RF-01",
+      "section": "Rules, Edge Cases, Failures",
+      "intent": "Capture business invariants.",
+      "question": "What business rules must always hold true?",
+      "followups": [
+        "What must never happen?",
+        "Any calculations or eligibility rules?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "rules"
+      ],
+      "outputs": [
+        "spec",
+        "plan",
+        "tasks"
+      ]
+    },
+    {
+      "id": "RF-02",
+      "section": "Rules, Edge Cases, Failures",
+      "intent": "Name likely edge cases.",
+      "question": "What are the top edge cases (weird but likely)?",
+      "followups": [
+        "Duplicate submissions?",
+        "Retries?",
+        "Out-of-order events?"
+      ],
+      "answer_type": "list",
+      "priority": "should",
+      "tags": [
+        "edge_cases",
+        "reliability"
+      ],
+      "outputs": [
+        "spec",
+        "tasks"
+      ]
+    },
+    {
+      "id": "RF-03",
+      "section": "Rules, Edge Cases, Failures",
+      "intent": "Define failure behavior and recovery.",
+      "question": "What should happen on failures (timeouts, invalid inputs, partial completion)?",
+      "followups": [
+        "Do we retry automatically?",
+        "How do we notify users?",
+        "What gets logged?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "errors",
+        "reliability",
+        "logging"
+      ],
+      "outputs": [
+        "spec",
+        "plan"
+      ]
+    },
+    {
+      "id": "CC-01",
+      "section": "Constraints & Compliance",
+      "intent": "Capture delivery constraints.",
+      "question": "What are the deadlines, budget constraints, and team size for v1?",
+      "followups": [
+        "Hard launch date?",
+        "What\u2019s flexible vs fixed?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "constraints",
+        "delivery"
+      ],
+      "outputs": [
+        "spec",
+        "plan",
+        "tasks"
+      ]
+    },
+    {
+      "id": "CC-02",
+      "section": "Constraints & Compliance",
+      "intent": "Capture non-negotiable technical constraints.",
+      "question": "What stack choices are preferred, and what is non-negotiable?",
+      "followups": [
+        "Cloud provider?",
+        "Languages/frameworks?",
+        "Existing systems to align with?"
+      ],
+      "answer_type": "free_text",
+      "priority": "should",
+      "tags": [
+        "stack",
+        "architecture"
+      ],
+      "outputs": [
+        "plan",
+        "tasks"
+      ]
+    },
+    {
+      "id": "CC-03",
+      "section": "Constraints & Compliance",
+      "intent": "Capture compliance/security needs.",
+      "question": "What compliance/security requirements apply (LGPD, audit logs, data retention, access controls)?",
+      "followups": [
+        "PII involved?",
+        "Encryption at rest/in transit?",
+        "Data residency needs?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "security",
+        "compliance",
+        "lgpd"
+      ],
+      "outputs": [
+        "spec",
+        "plan",
+        "tasks"
+      ]
+    },
+    {
+      "id": "VA-01",
+      "section": "Validation & Approval",
+      "intent": "Define objective acceptance criteria.",
+      "question": "What are the acceptance criteria (objective pass/fail)?",
+      "followups": [
+        "What must be true for sign-off?",
+        "Any measurable thresholds?"
+      ],
+      "answer_type": "list",
+      "priority": "must",
+      "tags": [
+        "acceptance",
+        "quality"
+      ],
+      "outputs": [
+        "spec",
+        "tasks"
+      ]
+    },
+    {
+      "id": "VA-02",
+      "section": "Validation & Approval",
+      "intent": "Define test strategy split.",
+      "question": "What must be tested automatically vs manually, and who owns validation?",
+      "followups": [
+        "CI requirements?",
+        "Manual test checklist?"
+      ],
+      "answer_type": "free_text",
+      "priority": "should",
+      "tags": [
+        "testing",
+        "ci"
+      ],
+      "outputs": [
+        "plan",
+        "tasks"
+      ]
+    },
+    {
+      "id": "VA-03",
+      "section": "Validation & Approval",
+      "intent": "Clarify approval flow.",
+      "question": "Who signs off, and what is the approval process?",
+      "followups": [
+        "Single approver or committee?",
+        "Any compliance review step?"
+      ],
+      "answer_type": "free_text",
+      "priority": "must",
+      "tags": [
+        "process",
+        "approval"
+      ],
+      "outputs": [
+        "spec",
+        "tasks"
+      ]
+    }
+  ]
+}
